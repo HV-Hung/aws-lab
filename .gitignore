@@ -1,0 +1,30 @@
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars
+terraform/crash.log
+terraform/*.tfplan
+
+# Terraform cert bundles
+terraform/*.pem
+
+# Python
+app/.venv/
+app/__pycache__/
+app/**/__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+.agents/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
