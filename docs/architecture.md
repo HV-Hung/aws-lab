@@ -14,6 +14,8 @@ Additionally, **event-driven services** (S3, SQS, SNS) are used for object stora
 
 ## Architecture Diagram
 
+![Architecture Diagram](architecture-diagram.png)
+
 ```
                         ┌──────────────┐
                         │   Internet   │

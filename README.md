@@ -2,9 +2,7 @@
 
 A hands-on project for learning AWS by building, deploying, and tearing down real cloud infrastructure using **Terraform** and a **Python FastAPI** application on **ECS Fargate**.
 
-```
-Internet → ALB (HTTP:80) → ECS Fargate (FastAPI) → RDS / S3 / SQS / SNS
-```
+![Architecture Diagram](docs/architecture-diagram.png)
 
 ---
 
@@ -153,16 +151,6 @@ See [docs/cost-analysis.md](docs/cost-analysis.md) for a full breakdown.
 ---
 
 ## Architecture
-
-![Architecture Diagram](docs/architecture-diagram.png)
-
-```
-Internet ──► ALB-SG (80/443) ──► ECS-SG (8000) ──► RDS-SG (5432)
-                                      │
-                                      ├──► S3  (file storage)
-                                      ├──► SQS (message queue)
-                                      └──► SNS (pub/sub)
-```
 
 - **Security groups are chained**: each layer only accepts traffic from the previous one
 - **RDS is doubly isolated**: private subnet + SG restriction
